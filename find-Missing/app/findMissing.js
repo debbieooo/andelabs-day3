@@ -30,7 +30,20 @@ function findMissing(arr1,arr2){
 		missing.push(k);
 	}
 
-	return missing;
+	//return missing;
+
+
+    if(missing.length <= 0){
+
+        return 0;
+
+    }
+    else if(missing.length==1){
+
+        
+        return parseInt(missing[0]);
+    }
+    
 
 
 
