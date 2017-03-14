@@ -1,0 +1,12 @@
+{
+  "name": "find-missing",
+  "version": "1.0.0",
+  "description": "Create a function *findMissing(arr1, arr2)* that takes in two arguments, both of which are arrays.",
+  "main": "findMissing.js",
+  "scripts": {
+    "test": "jasmine spec/findMissingSpec.js"
+  },
+  "author": "Deborah Oni",
+  "license": "ISC"
+}
+m

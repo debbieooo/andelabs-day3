@@ -1,0 +1,11 @@
+{
+  "name": "binary-search",
+  "version": "1.0.0",
+  "description": "Create a binary search function",
+  "main": "binarySearch.js",
+  "scripts": {
+    "test": "jasmine spec/binarySearchSpec.js"
+  },
+  "author": "Deborah Oni",
+  "license": "ISC"
+}
