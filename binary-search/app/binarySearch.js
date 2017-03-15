@@ -6,8 +6,9 @@
 
 
 
-
 Array.prototype.toTwenty= function(){
+
+
 
 	for(var i = 1; i<= 20; i++){
 
@@ -15,13 +16,14 @@ Array.prototype.toTwenty= function(){
 	}
 
 	return this;
-	console.log(this);
+
+	
 
 }
 
 Array.prototype.toForty= function(){
 
-	for(var i = 2; i<= 40; i++){
+	for(var i = 2; i<= 40; i+=2){
 
 		this.push(i);
 		
@@ -35,7 +37,7 @@ Array.prototype.toForty= function(){
 
 Array.prototype.toOneThousand= function(){
 
-	for(var i = 10; i<= 1000; i++){
+	for(var i = 10; i<= 1000; i+=10){
 
 		this.push(i);
 		
@@ -55,10 +57,7 @@ Array.prototype.toOneThousand= function(){
 //Each time you iterate, you should increase the count, to test how efficient your implementation is.
 
 
-
 Array.prototype.search= function(number){
-
-		
 
 
 
@@ -67,10 +66,19 @@ Array.prototype.search= function(number){
 		var mid = Math.floor((end + initial)/2);
 		var count = 0;
 
-		while(this[mid] != number && initial<end){
+	
+
+			while(this[mid] != number && initial<end){
 			if(number < this[mid]){
 
 				end = mid-1;
+			}
+
+			else if(number === this[mid]){
+
+				return count;
+				count ++;
+
 			}
 
 			else if (number> this[mid]){
@@ -79,20 +87,37 @@ Array.prototype.search= function(number){
 			}
 
 
-
 			mid = Math.floor((end +initial)/2);
 
-			count++;
+			
+		}
+
+
+		if(this[mid]== number){
+
+			return { 'count' : count, 'index': mid , 'length': this.length};
+		}
+
+		else{
+
+			return { 'count' : count, 'index': -1 , 'length': this.length};
+		}
+
+
+
+	
+
 
 
 		}
 
 		
+		
+		
 
-		return mid;
-}
 
-module.exports.Array=Array;
+
+module.exports.Array= Array;
 
 
 
